@@ -1,0 +1,42 @@
+DEBUT
+
+r=12000
+s=1250
+e=10
+rh=230
+
+#exercice 1
+
+assertion1 = ((365 * 3) / (24 - (16 - 8))) * (rh) > r == (e * s < r)
+assertion1 = (1095 / (24 - 8)) * 230 > 1200 == (12500 < 12000)
+assertion1 = (1095 / 16 *230) > 12000 == 12500 < 12000
+assertion1 = 1574.625 > 12000 == 12500 < 12000
+assertion1 = 1574.625 > 12000 == False
+assertion1 = True == False
+assertion1 == False
+
+#correction 1
+
+assertion1 = ((365 * 3) / (24 - (16 - 8))) * (rh) > r == (e * s < r)
+
+assertion1Pt1 = (((365 * 3) / (24 - (16 - 8))) * (rh) > r) #true
+assertion1Pt2 = (e * s < r) #false
+
+#assertion1 === (assertion1Pt1 == assertion1Pt2)
+#assertion1 === (assertion1Pt1 == false)
+#assertion1 === (true == false)
+print(assertion1)
+
+#ercice 2
+
+assertionDeux = ((365 * 3) / (4 - (12 - 8)) * (rh) > r) == (e * s < r)
+
+assertionDeuxPtUn = ((365 * 3) / (4 - (12 - 8)) * (rh) > r) #false
+assertionDeuxPtDeux = (e * s < r) #false
+
+#assertionDeux === (assertionDeuxPtUn == assertionDeuxPtDeux)
+#assertionDeux === (false == assertionDeuxPtDeux)
+#assertionDeux === (false == false) #true
+print(assertionDeux)
+
+FIN
