@@ -49,19 +49,19 @@ def withdrawFees(total, percent):
 def calculSalaireNet(salaireBrut, public):
     # Si j'occupe un poste de la fonction publique
     if public:
-    # Alors je retourne le salaire brut - 15% de taxes
+        # Alors je retourne le salaire brut - 15% de taxes
         return withdrawFees(salaireBrut, 15)
     # Sinon, c'est que je suis un opérateur privé
     else:
-    # Alors je retourne le salaire brut - 23% de douille bien à l'ancienne
+        # Alors je retourne le salaire brut - 23% de douille bien à l'ancienne
         return withdrawFees(salaireBrut, 23)
 
 tour = 0
 # Tant que je ne suis pas au tour 5
 while tour != 5
-# Appeler la fonction jouerUnTour
+    # Appeler la fonction jouerUnTour
     jouerUnTour()
-# J'effectur l'action de passer un tour
+    # J'effectur l'action de passer un tour
     tour = tour + 1
 
 # Autre manière de faire (un peu mieux)
@@ -70,8 +70,38 @@ for tour in range(4):
 
 # Explications
 # for pour paramètre défini (ex: pour 5 tours)
-# while pour paramètre indéfini (ex: tant que beryl a pas pick heimer)
+# while pour paramètre indéfini (ex: tant que beryl a pas pick heimer) -> dangereux car peut boucler à l'infini
 
 # En C
 # for (x=0, x<5; x=x+1)
 # selon : for (valeur de début, jusqu'à quel valeur, que faire)
+
+# Exercice
+    # Faire un mini jeu qui affiche un message lorsque input renvoie le bon caractère
+    # le caractère doit être paramétrable
+
+def input():
+    # Renvoie un caractère de type string au hasard
+
+def miniGame(chosenLetter):
+    # A l'appel de ma fonction je peux choisir ma lettre
+    # Tant que mon caractère n'est pas le bon
+    while chosenLetter != input()
+        # Générer un nouveau caractère
+        input()
+    # Si mon caractère est le bon
+    if chosenLetter == input()
+        # Alors écrire un message dans le terminal
+        print("Congrats, you found the right letter !")
+
+# Correction
+
+def miniGameDeux(chosenLetter):
+    # Définir une lettre aléatoire
+    actualLetter = input()
+    # Tant que la lettre aléatoire n'est pas la même que la lettre choisie
+    while actualLetter !== chosenLetter
+        # Changer la lettre aléatoire
+        actualLetter = input()
+    # Afficher un message quand la lettre a été trouvée
+    print("Braveau le vo")
