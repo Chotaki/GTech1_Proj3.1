@@ -1,17 +1,19 @@
 def add(x, y):
     return x + y
 
-def sub(x, y){:
+def sub(x, y):
     return x - y
 
 def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    # Si mon dénominateur est égal à 0
+    # Si mon dénominateur est égal à 0, la division est impossible
     if y == 0
     # Alors écrire un message d'erreur dans le terminal
-        print(Error: x cannot be divided by 0)
+        print("Error: x cannot be divided by 0")
+    # Renvoyer rien pour sortir de la fonction
+    return
     # Sinon retourner le résultat de la division
     else return x / y
 
@@ -53,3 +55,23 @@ def calculSalaireNet(salaireBrut, public):
     else:
     # Alors je retourne le salaire brut - 23% de douille bien à l'ancienne
         return withdrawFees(salaireBrut, 23)
+
+tour = 0
+# Tant que je ne suis pas au tour 5
+while tour != 5
+# Appeler la fonction jouerUnTour
+    jouerUnTour()
+# J'effectur l'action de passer un tour
+    tour = tour + 1
+
+# Autre manière de faire (un peu mieux)
+for tour in range(4):
+    jouerUnTour()
+
+# Explications
+# for pour paramètre défini (ex: pour 5 tours)
+# while pour paramètre indéfini (ex: tant que beryl a pas pick heimer)
+
+# En C
+# for (x=0, x<5; x=x+1)
+# selon : for (valeur de début, jusqu'à quel valeur, que faire)
