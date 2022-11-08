@@ -105,3 +105,78 @@ def miniGameDeux(chosenLetter):
         actualLetter = input()
     # Afficher un message quand la lettre a été trouvée
     print("Braveau le vo")
+
+# Tableau
+
+tableau = [0,10,15,5,7,6,3,4,8,4,9,5,7,54,8,7,24,45,7]
+
+# Pour recuperer 15 je prends dans le tableau l'index 3 - 1
+print(tableau [2]) #Renvoie 15
+
+# Combiner des variables
+
+len(tableau) #Renvoie la longueur du tableau (nombre d'éléments qu'il y a dedans)
+
+prenom = "Anaëlle"
+nom = "Romanzin"
+
+nomPrenom = nom + prenom # Renvoie AnaëlleRomanzin
+nomPrenom = nom + " " + prenom # Renvoie Anaëlle Romanzin
+integerValue = 342
+integerValue = str(342) # Renvoie "342" au lieu de 342
+
+# Exercice 1
+# Faire une fonction qui concatene 2 chaines de caractère, les séparants par une virgule
+
+motUn = bananes
+motDeux = pommes
+
+liste = motUn + ", " + motDeux #Renvoie bananes, pommes
+
+# Exercice 2
+# Faire une fonction qui itere sur tous les index d'un tableau renvoyant une chaine de caractere
+# avec l'ensembles des occurations d'un chiffre e.g.:
+# Pour tableau = [0,1,1,1,0,1,1,0,1]
+# la fonction(tableau, 0) doit renvoyer "0,4,7" n'hesitez pas à implementer la premiere fonction ;)
+
+tableauExercice = [0,1,1,1,0,1,1,0,1]
+
+def fonction(tableauExercice):
+    for index in range(len(tableauExercice)):
+        
+# Exercice 3
+# Faire une fonction Afficher un message
+
+def afficherMessage():
+    print("J'affiche un message !")
+
+# Exercice 4
+# Tel que
+listeUtilisateur ={
+    "Anaëlle" : "motdepasse",
+    "Michel" : "password",
+    "Toto" : "12345",
+    "JhonDoe" : "azerty"
+}
+# Ecrivez la fonction login(userName, password, listUser) permettant d'afficher un message de connexion si
+# le combo userName/password est bon
+
+def userCombo(userName, password):
+    # Si le combo userName/password est bon
+    if listeUtilisateur["userName"] == password
+    # Alors afficher un message de connexion
+        print("message de connexion")
+
+tableauMultiType = ["Anaëlle", true, tableau, 4 > 2, None]
+tableauDim = [0,1,2,3]
+tableauDim2 = [0,1,21,3]
+tableauMultiDim = [tableauDimn tableauDim2] # En ajoutant un tableau dans un tableau on crée de la dimension (on a des colones en plus des lignes)
+tableauMultiDim[1][2] # Renvoie 21
+
+tableauClefVal = {"Clef" : "Valeur"}
+tableauClefVal["Clef"] #Renvoie "Valeur"
+
+# Existe pas en python (mais utile en js, php...) :
+foreach key : valeur in tableauClefVal
+    print(key) # Renvoie "Clef"
+    print(valeur) # Renvoie "Valeur"
