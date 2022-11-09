@@ -133,6 +133,18 @@ motDeux = pommes
 
 liste = motUn + ", " + motDeux #Renvoie bananes, pommes
 
+# Correction
+
+# Definir une fonction qui concatene avec comme parametres : une chaineA et chaineB
+# qui retourne la concatenation de chaineA, une coma et enfin chaineB
+def concatWithComma(chaineA, chaineB):
+    # Je m'assure que chaineA soit bien de type str
+    stringifiedChaineA = str(chaineA)
+    # Je m'assure que chaineB soit bien de type str
+    stringifiedChaineB = str(chaineB)
+    # Retourner chaineA concatenée avec une et chaineB
+    return stringifiedChaineA + ", " + stringifiedChaineB
+
 # Exercice 2
 # Faire une fonction qui itere sur tous les index d'un tableau renvoyant une chaine de caractere
 # avec l'ensembles des occurations d'un chiffre e.g.:
@@ -143,6 +155,35 @@ tableauExercice = [0,1,1,1,0,1,1,0,1]
 
 def fonction(tableauExercice):
     for index in range(len(tableauExercice)):
+
+# Correction
+
+tableau = [0,1,1,1,0,1,1,0,1]
+# Definir une fonction qui prend une liste tableau et une variable x quelconque
+def findIndexes(tableau, x):
+    # Initialiser i à 0
+    i = 0
+    # Definir chaineResultat en tant que string vide
+    chaineResultat = ""
+    # On determine firstTurn a true
+    firstTurn = True
+    # Tant que i est inferieur à la longueur de tableau
+    while i < len(tableau):
+        # Alors si l'elt d'index i de tableau est egal a x
+        if tableau[i] == x:
+            # Alors
+            # Si je suis au premier tour (firstTurn est true)
+            if firstTurn:
+                # Alors j'assigne str(i) a chaine resultat
+                chaineResultat = str(i)
+                # On passe first turn a false
+                firstTurn = False
+            # Sinon on assigne a chaineResultat le retour de contactWithComma(chaineResultat, str(i))
+            else chaineResultat = concatWithComma(chaineResultat, str(i))
+        # On incremente i de 1
+        i = i + 1
+    # Renvoyer chaineResultat
+    return chaineResultat
         
 # Exercice 3
 # Faire une fonction Afficher un message
@@ -161,11 +202,14 @@ listeUtilisateur ={
 # Ecrivez la fonction login(userName, password, listUser) permettant d'afficher un message de connexion si
 # le combo userName/password est bon
 
-def userCombo(userName, password):
-    # Si le combo userName/password est bon
-    if listeUtilisateur["userName"] == password
-    # Alors afficher un message de connexion
-        print("message de connexion")
+# Definir la fonvtion login
+def login(userName, password):
+    # Si le mdp de la clé username est le même que le mdp entré, alors bon login
+    if(mdp==liste[userName]):
+        return "Bon login"
+    # Sinon, il y a une erreur de mdp ou username
+    else:
+        return "Mauvais username ou mot de passe"
 
 tableauMultiType = ["Anaëlle", true, tableau, 4 > 2, None]
 tableauDim = [0,1,2,3]
