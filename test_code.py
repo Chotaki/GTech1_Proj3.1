@@ -2,35 +2,37 @@ from random import randint
 
 tableau = ["pierre", "feuille", "ciseau"]
 
-def pierrFeuilleCiseau():
+def pierreFeuilleCiseau():
     continuer = True
 
-    while continuer == True:
+    while continuer:
         chiffreAleatoire = randint(0,2)
-        jeuJoueur = input("Entrez un chiffre entre 0 et 2 : ")
+        jeuJoueur = int(input("Entrez un chiffre entre 0 et 2 : "))
+
+        print(chiffreAleatoire, jeuJoueur)
 
         if chiffreAleatoire == jeuJoueur:
             print("Egalité, essaye encore")
-        
-        elif chiffreAleatoire == tableau["pierre"]:
-            if jeuJoueur == tableau["feuille"]:
+
+        elif chiffreAleatoire == tableau.index("pierre"):
+            if jeuJoueur == tableau.index("feuille"):
                 print("Bravo tu as gagné !")
                 continuer == False
-            elif jeuJoueur == tableau["ciseau"]:
+            else:
                 print("Game over, try again")
 
-        elif chiffreAleatoire == tableau["feuille"]:
-            if jeuJoueur == tableau["ciseau"]:
+        elif chiffreAleatoire == tableau.index("feuille"):
+            if jeuJoueur == tableau.index("pierre"):
                 print("Bravo tu as gagné !")
                 continuer == False
-            elif jeuJoueur == tableau["pierre"]:
+            else:
                 print("Game over, try again")
 
-        elif chiffreAleatoire == tableau["ciseau"]:
-            if jeuJoueur == tableau["pierre"]:
+        elif chiffreAleatoire == tableau.index("ciseau"):
+            if jeuJoueur == tableau.index("pierre"):
                 print("Bravo tu as gagné !")
                 continuer == False
-            elif jeuJoueur == tableau["feuille"]:
+            else:
                 print("Game over, try again")
 
-pierrFeuilleCiseau()
+pierreFeuilleCiseau()

@@ -1,0 +1,42 @@
+DEBUT
+
+# On admet une fonction random qui retourne un chiffre aléatoire entre 0 et 2
+# On admet une fonction input qui permet à un joueur d'entrer une valeur
+
+# Créer une liste tel que tableau = ["pierre","feuille","ciseau"]
+
+# Définir pierreFeuilleCiseau
+    # Définir continuer comme True
+
+    # Tant que continuer est True
+
+        # Définir chiffreAléatoire grâce à la fonction random
+        # Utiliser la fonction input pour definir jeuJoueur et passer jeuJoueur en integer
+
+        # Si chiffreAléatoire est égal à jeuJoueur
+            # Alors afficher "Egalité, essaye encore"
+
+        # Sinon si chiffreAléatoire est égal à l'index de "pierre"
+            # Alors si jeuJoueur est égal à l'index de "feuille"
+                # Afficher "Bravo, tu as gagné !"
+                # continuer est false
+            # Sinon
+                # Afficher "Game over, try again"
+
+        # Sinon si chiffreAléatoire est égal à l'index de "feuille"
+            # Alors si jeuJoueur est égal à l'index de "ciseau"
+                # Afficher "Bravo, tu as gagné !"
+                # continuer est false
+            # Sinon
+                # Afficher "Game over, try again"
+
+        # Sinon si chiffreAléatoire est égal à l'index de "ciseau"
+            # Alors si jeuJoueur est égal à l'index de "pierre"
+                # Afficher "Bravo, tu as gagné !"
+                # continuer est false
+            # Sinon
+                # Afficher "Game over, try again"
+
+# Executer la fonction pierreFeuilleCiseau
+
+FIN
