@@ -113,5 +113,19 @@ class TicTacToe :
                 print("Player {player} won !")
             break
 
-            # Changer de joueur
-            
+            # checking whether the game is draw or not
+            if self.is_board_filled():
+                print("Match Draw!")
+            break
+
+            # swapping the turn
+            player = self.swap_player_turn(player)
+
+            # showing the final view of board
+            print()
+            self.show_board()
+
+# starting the game
+tic_tac_toe = TicTacToe()
+tic_tac_toe.start()
+
