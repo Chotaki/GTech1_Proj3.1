@@ -89,7 +89,7 @@ class TicTacToe :
             for item in row:
                 print(item, end=" ")
             print()
-    
+
     # Commencer la partie
     def start(self):
         self.generateTable()
@@ -113,19 +113,18 @@ class TicTacToe :
                 print("Player {player} won !")
             break
 
-            # checking whether the game is draw or not
-            if self.is_board_filled():
-                print("Match Draw!")
+            # Vérifier si il y a égalité
+            if self.emptyTable():
+                print("Egalité !")
             break
 
-            # swapping the turn
-            player = self.swap_player_turn(player)
+            # Changer de joueur
+            player = self.swapPlayer(player)
 
-            # showing the final view of board
+            # Montrer la grille de jeu finale
             print()
-            self.show_board()
+            self.showTable()
 
-# starting the game
+# Lancer le jeu
 tic_tac_toe = TicTacToe()
 tic_tac_toe.start()
-
