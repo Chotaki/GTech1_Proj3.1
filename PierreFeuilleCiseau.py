@@ -24,7 +24,7 @@ def pierreFeuilleCiseau():
                 print("Erreur, valeur incorrecte")
 
         # Afficher les actions de l'ordinateur et du joueur
-        print(tableau[chiffreAleatoire], tableau[jeuJoueur])
+        print(tableau[jeuJoueur], tableau[chiffreAleatoire])
 
         # Vérifier si il y a une égalité
         if chiffreAleatoire == jeuJoueur:
