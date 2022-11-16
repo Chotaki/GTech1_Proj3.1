@@ -105,8 +105,7 @@ class TicTacToe :
 
             # Le joueur va insérer une valeur à jouer
             row, col = list(
-                map(int, input("Enter row and column of the spot you want to play : ").split()))
-            print()
+                int(input("Enter row and column of the spot you want to play : ")).split())
 
             # Vérifier si le joueur a gagné ou non
             if self.playerWin():
@@ -117,7 +116,7 @@ class TicTacToe :
             if self.emptyTable():
                 print("Egalité !")
             break
-
+ 
             # Changer de joueur
             player = self.swapPlayer(player)
 
